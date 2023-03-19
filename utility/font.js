@@ -8,7 +8,9 @@ import {
     Montserrat_800ExtraBold,
     Montserrat_900Black,
 } from '@expo-google-fonts/montserrat';
-
+import {
+    Inter_600SemiBold
+} from '@expo-google-fonts/inter'
 
 export const useCustomFonts = () => {
     const [fontsLoaded] = useFonts({
@@ -19,6 +21,7 @@ export const useCustomFonts = () => {
         'Montserrat_700': Montserrat_700Bold,
         'Montserrat_800': Montserrat_800ExtraBold,
         'Montserrat_900': Montserrat_900Black,
+        'Inter_600': Inter_600SemiBold,
       });
 
   return fontsLoaded;

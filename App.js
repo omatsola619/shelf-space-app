@@ -47,7 +47,7 @@ export default function App() {
       }}>
         <Tab.Screen name="Home" component={Home} options={{
           tabBarIcon: ({color}) => <Entypo name="home" size={24} color={color} />,
-          headerTitle: 'Book Shelf'
+          headerTitle: 'Shelf Space'
         }} />
         <Tab.Screen name="Add" component={AddBook} options={{
           tabBarIcon: ({color}) => <Entypo name="squared-plus" size={24} color={color} />,
