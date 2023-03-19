@@ -11,6 +11,7 @@ import { Ionicons } from '@expo/vector-icons';
 import { StyleSheet, View } from 'react-native';
 import { useCustomFonts } from './utility/font';
 
+
 const Tab = createBottomTabNavigator();
 
 export default function App() {
@@ -38,7 +39,7 @@ export default function App() {
         headerRight: () => {
           return (
             <View style={styles.headerRightItems}>
-              <Ionicons name="notifications" size={22} color="#0366d6" />
+              <Ionicons name="notifications-outline" size={24} color="#0366d6" />
               <SimpleLineIcons name="options-vertical" size={18} color="#0366d6" style={styles.notifIcon}/>
             </View>
           )
