@@ -1,5 +1,4 @@
 import { StatusBar } from 'expo-status-bar';
-import { useEffect, useState } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Home from './screens/Home';
@@ -31,7 +30,10 @@ export default function App() {
         headerTitleAlign: 'left',
         headerTitleStyle: {
           fontFamily: 'Montserrat_600',
-          fontSize: 16,
+          fontSize: 18,
+        },
+        tabBarLabelStyle: {
+          fontFamily: 'Montserrat_600',
         },
         headerRight: () => {
           return (
@@ -43,13 +45,16 @@ export default function App() {
         } 
       }}>
         <Tab.Screen name="Home" component={Home} options={{
-          tabBarIcon: ({color}) => <Entypo name="home" size={24} color={color} />
+          tabBarIcon: ({color}) => <Entypo name="home" size={24} color={color} />,
+          headerTitle: 'Book Shelf'
         }} />
         <Tab.Screen name="Add" component={AddBook} options={{
-          tabBarIcon: ({color}) => <Entypo name="squared-plus" size={24} color={color} />
+          tabBarIcon: ({color}) => <Entypo name="squared-plus" size={24} color={color} />,
+          title: "Add Book"
         }} />
         <Tab.Screen name="Profile" component={Profile} options={{
-          tabBarIcon: ({color}) => <FontAwesome5 name="user-alt" size={22} color={color} />
+          tabBarIcon: ({color}) => <FontAwesome5 name="user-alt" size={22} color={color} />,
+          title: "Profile",
         }} />
       </Tab.Navigator>
       <StatusBar style="auto" />
