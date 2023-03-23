@@ -5,22 +5,24 @@ export const styles = StyleSheet.create({
         flex: 1,
         height: '100%',
         marginBottom: 25,
-        paddingHorizontal: 10,
-        paddingVertical: 10,
+        paddingHorizontal: 7,
+        paddingVertical: 7,
         marginHorizontal: 10,
         borderRadius: 7,
         backgroundColor: '#f9f9f9',
         justifyContent: 'center',
-        borderBottomWidth: 1,
-        borderBottomColor: '#f2f2f2',
+
     },
+    pressed: {
+        opacity: 0.55,
+    } ,
     wrapper: {
         flexDirection: 'row',
         width: '100%',
     },
     productImage: {
-        width: 90,
-        height: 110,
+        width: 80,
+        height: 100,
         borderRadius: 5,
     },
     bookDetails: {
@@ -43,6 +45,6 @@ export const styles = StyleSheet.create({
     price: {
         fontSize: 15,
         fontFamily: 'Montserrat_600',
-        color: 'black'
+        color: '#0366d6'
     }
 });

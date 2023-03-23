@@ -17,6 +17,7 @@ export const styles = StyleSheet.create({
     },
     inputBox: {
         flex: 1,
+        fontSize: 16,
     },
     searchIcon: {
         marginHorizontal: 10,

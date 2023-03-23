@@ -9,7 +9,12 @@ function Home() {
         <View style={styles.container}>
             <View style={styles.searchContainer}>
                 <Feather name="search" size={22} color="#cccccc" style={styles.searchIcon} />
-                <TextInput style={styles.inputBox} placeholder="Search books by title" />
+                <TextInput 
+                    style={styles.inputBox} 
+                    placeholder="Search books by title" 
+                    selectionColor="grey" 
+                    keyboardType="default"
+                />
             </View>
             <View style={{flex: 1}}>
                 <FlatList 
