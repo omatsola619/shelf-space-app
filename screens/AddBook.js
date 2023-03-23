@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Button, Image, Text, TextInput, View } from "react-native";
+import { Image, Pressable, ScrollView, Text, TextInput, TouchableHighlight, View } from "react-native";
 import { styles } from "../styling/AddBook.styled";
 import * as ImagePicker from 'expo-image-picker';
+import { Feather } from '@expo/vector-icons';
 
 function AddBook() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -19,7 +20,7 @@ function AddBook() {
       };
 
     return (
-        <View style={styles.container}>
+        <ScrollView style={styles.container}>
             <View style={styles.inputForm}>
                 <TextInput
                     style={styles.inputBox}
@@ -57,11 +58,20 @@ function AddBook() {
                     selectionColor="grey" 
                 />
                 <View style={styles.imagePicker}>
-                    <Button title="Select Image" onPress={selectImage} />
+                    <TouchableHighlight title="Select Image" style={styles.imageBox} onPress={selectImage}>
+                        <View style={styles.buttonWrapper}>
+                            <Text style={styles.buttonText}>Select Image</Text>
+                            <Feather name="upload" size={18} color="white" />
+                        </View>
+                    </TouchableHighlight>
                     {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 200, height: 200 }} />}
                 </View>
+                {/* submit the form */}
+                <Pressable style={styles.submitBtn}>
+                    <Text style={styles.submitText}>Submit</Text>
+                </Pressable>
             </View>
-        </View>
+        </ScrollView>
     )
 };
 

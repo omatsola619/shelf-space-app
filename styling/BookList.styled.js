@@ -21,8 +21,8 @@ export const styles = StyleSheet.create({
         width: '100%',
     },
     productImage: {
-        width: 80,
-        height: 100,
+        width: 60,
+        height: 80,
         borderRadius: 5,
     },
     bookDetails: {
@@ -33,14 +33,14 @@ export const styles = StyleSheet.create({
     bookTitle: {
         fontSize: 17,
         fontFamily: 'Montserrat_600',
-        paddingBottom: 7,
+        paddingBottom: 2,
         color: 'black'
     },
     bookAuthor: {
         fontSize: 14,
         color: 'grey',
         fontFamily: 'Inter_600',
-        paddingBottom: 20,
+        paddingBottom: 10,
     },
     price: {
         fontSize: 15,

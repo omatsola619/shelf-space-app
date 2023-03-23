@@ -30,7 +30,7 @@ export default function App() {
         tabBarHideOnKeyboard: true,
         headerTitleAlign: 'left',
         headerTitleStyle: {
-          fontFamily: 'Montserrat_600',
+          fontFamily: 'Montserrat_700',
           fontSize: 18,
         },
         tabBarLabelStyle: {
