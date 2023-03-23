@@ -64,7 +64,7 @@ function AddBook() {
                             <Feather name="upload" size={18} color="white" />
                         </View>
                     </TouchableHighlight>
-                    {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 200, height: 200 }} />}
+                    {selectedImage && <Image source={{ uri: selectedImage }} style={{ width: 200, height: 200, paddingBottom: 5 }} />}
                 </View>
                 {/* submit the form */}
                 <Pressable style={styles.submitBtn}>
