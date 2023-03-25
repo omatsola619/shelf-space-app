@@ -1,9 +1,13 @@
 import { Image, Pressable, Text, View } from "react-native";
 import { styles } from "../styling/BookList.styled";
 
-function BookList({item}) {
+function BookList({item, navigation}) {
+
+    const handlePress = () => {
+        navigation.navigate("Details", {bookDetails: item})
+    }
     return (
-        <Pressable android_ripple={{color: '#ccc'}} style={({pressed}) => [styles.container, pressed && styles.pressed]}>
+        <Pressable onPress={handlePress} android_ripple={{color: '#ccc'}} style={({pressed}) => [styles.container, pressed && styles.pressed]}>
             <View style={styles.wrapper}>
                 <Image style={styles.productImage} source={item.image} />
                 <View style={styles.bookDetails}>

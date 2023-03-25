@@ -1,9 +1,17 @@
 import { Text, View } from "react-native";
+import { styles } from "../styling/BookDetails.styled";
 
-function BookDetails() {
+function BookDetails({route}) {
+    const bookDetails = route.params.bookDetails;
+
     return(
-        <View>
-            <Text>BookDetails page</Text>
+        <View style={styles.container}>
+            <View style={styles.wrapper}>
+                <View style={styles.header}>
+                    
+                </View>
+            </View>
+            
         </View>
     )
 };

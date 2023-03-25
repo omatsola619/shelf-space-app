@@ -1,18 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from './screens/Home';
-import AddBook from './screens/AddBook';
-import Profile from './screens/Profile';
-import { FontAwesome5 } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
-import { SimpleLineIcons } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { StyleSheet, View } from 'react-native';
 import { useCustomFonts } from './utility/font';
+// import StackNavigator from './components/navigator/StackNavigator';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import TabNavigator from './components/navigator/TabNavigator';
+import BookDetails from './screens/BookDetails';
 
-
-const Tab = createBottomTabNavigator();
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   const fontsLoaded = useCustomFonts();
@@ -23,54 +17,16 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{
-        tabBarActiveTintColor: '#0366d6',
-        tabBarInactiveTintColor: 'grey',
-        tabBarLabelStyle: {fontSize: 12},
-        tabBarHideOnKeyboard: true,
-        headerTitleAlign: 'left',
-        headerTitleStyle: {
-          fontFamily: 'Montserrat_700',
-          fontSize: 18,
-        },
-        tabBarLabelStyle: {
-          fontFamily: 'Montserrat_600',
-        },
-        headerRight: () => {
-          return (
-            <View style={styles.headerRightItems}>
-              <Ionicons name="notifications-outline" size={24} color="#0366d6" />
-              <SimpleLineIcons name="options-vertical" size={18} color="#0366d6" style={styles.notifIcon}/>
-            </View>
-          )
-        } 
-      }}>
-        <Tab.Screen name="Home" component={Home} options={{
-          tabBarIcon: ({color}) => <Entypo name="home" size={24} color={color} />,
-          headerTitle: 'Shelf Space'
+      <Stack.Navigator>
+        <Stack.Screen name="Home Screen" component={TabNavigator} options={{
+          headerShown: false,
         }} />
-        <Tab.Screen name="Add" component={AddBook} options={{
-          tabBarIcon: ({color}) => <Entypo name="squared-plus" size={24} color={color} />,
-          title: "Add Book"
+        <Stack.Screen name="Details" component={BookDetails} options={{
+          headerShown: false,
         }} />
-        <Tab.Screen name="Profile" component={Profile} options={{
-          tabBarIcon: ({color}) => <FontAwesome5 name="user-alt" size={22} color={color} />,
-          title: "Profile",
-        }} />
-      </Tab.Navigator>
+      </Stack.Navigator>
       <StatusBar style="auto" />
     </NavigationContainer>
   );
 }
 
-const styles = StyleSheet.create({
-  headerRightItems: {
-    display: 'flex',
-    flexDirection: 'row',
-    alignItems: 'center'
-  },
-  notifIcon: {
-    paddingRight: 10,
-    paddingLeft: 20,
-  }
-})

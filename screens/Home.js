@@ -5,7 +5,7 @@ import { DATA } from "../data/dummyData";
 import BookList from "../components/BookList";
 import { useState } from "react";
 
-function Home() {
+function Home({navigation}) {
     const [data, setData] = useState(DATA)
     const [query, setQuery] = useState('')
 
@@ -33,7 +33,7 @@ function Home() {
             <View style={{flex: 1}}>
                 <FlatList 
                     data={filteredItems}
-                    renderItem={BookList}
+                    renderItem={({item}) => <BookList item={item} navigation={navigation} />}
                     keyExtractor={item => item.isbn}
                 />
             </View>
