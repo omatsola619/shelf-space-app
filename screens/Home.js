@@ -23,7 +23,7 @@ function Home({navigation}) {
                 <Feather name="search" size={22} color="#cccccc" style={styles.searchIcon} />
                 <TextInput 
                     style={styles.inputBox} 
-                    placeholder="Search books by title" 
+                    placeholder="Search books by title, genre or author" 
                     selectionColor="grey" 
                     keyboardType="default"
                     value={query}

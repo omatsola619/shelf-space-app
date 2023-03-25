@@ -13,7 +13,7 @@ export const DATA = [
     {
         title: "Atomic Habits",
         year: 2011,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "James Clear",
         genre: "humanity",
         price: 100,
@@ -23,7 +23,7 @@ export const DATA = [
     {
         title: "The Bezos Letter",
         year: 2012,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Jeff Bezos",
         genre: "business",
         price: 250,
@@ -33,7 +33,7 @@ export const DATA = [
     {
         title: "Purple Hibiscus",
         year: 1991,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Chiamanda Ngozi Adichie",
         genre: "novel",
         price: 300,
@@ -43,7 +43,7 @@ export const DATA = [
     {
         title: "Othello",
         year: 1932,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Williams Shakespeare",
         genre: "humanity",
         price: 500,
@@ -53,7 +53,7 @@ export const DATA = [
     {
         title: "Psychology of Money",
         year: 2011,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Morgan Housel",
         genre: "money",
         price: 100,
@@ -63,7 +63,7 @@ export const DATA = [
     {
         title: "Rich Dad Poor Dad",
         year: 2004,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Robert Kiyosaki",
         genre: "business",
         price: 400,
@@ -73,7 +73,7 @@ export const DATA = [
     {
         title: "Romeo & Juliet",
         year: 2002,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Williams Shakespeare",
         genre: "romance",
         price: 250,
@@ -83,7 +83,7 @@ export const DATA = [
     {
         title: "Sell Like Crazy",
         year: 2019,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Sabri Suby",
         genre: "business",
         price: 291,
@@ -93,7 +93,7 @@ export const DATA = [
     {
         title: "Smart Money Woman",
         year: 2022,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Kemi Akins",
         genre: "money",
         price: 500,
@@ -103,7 +103,7 @@ export const DATA = [
     {
         title: "Think and Grow Rich",
         year: 2000,
-        description: "",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia",
         author: "Napoleon Hills",
         genre: "psychology",
         price: 400,
