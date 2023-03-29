@@ -13,10 +13,12 @@ function BookDetails({ route, navigation }) {
     return (
         <View style={styles.container}>
             <Header />
-            <View>
-                <ImageDetails details={bookDetails} />
-                <BookInfo details={bookDetails} />
-            </View>
+            <ScrollView>
+                <View>
+                    <ImageDetails details={bookDetails} />
+                    <BookInfo details={bookDetails} />
+                </View>
+            </ScrollView>
         </View>
     )
 };

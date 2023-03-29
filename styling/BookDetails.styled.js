@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
+        flex: 1,
         display: 'flex',
         backgroundColor: '#e4e8eb',
         paddingTop: 65,
@@ -38,7 +39,7 @@ export const styles = StyleSheet.create({
     productDetails: {
         paddingTop: 30,
         paddingHorizontal: 20,
-        paddingBottom: 100,
+        paddingBottom: 20,
         backgroundColor: 'white',
         height: '100%'
     },
@@ -120,7 +121,9 @@ export const styles = StyleSheet.create({
         minWidth: 100,
         borderWidth: 1,
         flex: 1,
-        marginHorizontal: 10
+        marginHorizontal: 10,
+        textAlignVertical: 'center', 
+        textAlign: 'center',
     }
 
 })

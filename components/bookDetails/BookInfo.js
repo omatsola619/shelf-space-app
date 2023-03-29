@@ -24,7 +24,7 @@ function BookInfo({details}) {
                     <Pressable style={styles.controlBtn}>
                         <Text style={styles.controlText}>Decrease</Text>
                     </Pressable>
-                    <TextInput style={styles.controlInput} />
+                    <TextInput style={styles.controlInput} selectionColor="grey" keyboardType="numeric"  />
                     <Pressable style={styles.controlBtn}>
                         <Text style={styles.controlText}>Increase</Text>
                     </Pressable>
