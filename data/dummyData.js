@@ -18,7 +18,8 @@ export const DATA = [
         genre: "humanity",
         price: 100,
         isbn: '3989',
-        image: atomichabits
+        image: atomichabits,
+        quantity: 25
     },
     {
         title: "The Bezos Letter",
@@ -28,7 +29,8 @@ export const DATA = [
         genre: "business",
         price: 250,
         isbn: '5848',
-        image: bezos
+        image: bezos,
+        quantity: 26
     },
     {
         title: "Purple Hibiscus",
@@ -38,7 +40,8 @@ export const DATA = [
         genre: "novel",
         price: 300,
         isbn: '4978',
-        image: purplehisbicus
+        image: purplehisbicus,
+        quantity: 35
     },
     {
         title: "Othello",
@@ -48,7 +51,8 @@ export const DATA = [
         genre: "humanity",
         price: 500,
         isbn: '9395',
-        image: othello
+        image: othello,
+        quantity: 0
     },
     {
         title: "Psychology of Money",
@@ -58,7 +62,8 @@ export const DATA = [
         genre: "money",
         price: 100,
         isbn: '2987',
-        image: psychology
+        image: psychology,
+        quantity: 17
     },
     {
         title: "Rich Dad Poor Dad",
@@ -68,7 +73,8 @@ export const DATA = [
         genre: "business",
         price: 400,
         isbn: '4047',
-        image: richdad
+        image: richdad,
+        quantity: 4
     },
     {
         title: "Romeo & Juliet",
@@ -88,7 +94,8 @@ export const DATA = [
         genre: "business",
         price: 291,
         isbn: '4946',
-        image: sell
+        image: sell,
+        quantity: 0
     },
     {
         title: "Smart Money Woman",
@@ -98,7 +105,8 @@ export const DATA = [
         genre: "money",
         price: 500,
         isbn: '4984',
-        image: smart
+        image: smart,
+        quantity: 1
     },
     {
         title: "Think and Grow Rich",
@@ -108,6 +116,7 @@ export const DATA = [
         genre: "psychology",
         price: 400,
         isbn: '0848',
-        image: think
+        image: think,
+        quantity: 12
     },
 ]
