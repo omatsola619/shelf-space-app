@@ -5,6 +5,10 @@ import { useCustomFonts } from './utility/font';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import TabNavigator from './components/navigator/TabNavigator';
 import BookDetails from './screens/BookDetails';
+import * as SplashScreen from 'expo-splash-screen';
+
+SplashScreen.preventAutoHideAsync();
+setTimeout(SplashScreen.hideAsync, 2000);
 
 const Stack = createNativeStackNavigator();
 
