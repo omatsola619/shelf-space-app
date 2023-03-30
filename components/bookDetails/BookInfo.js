@@ -9,7 +9,7 @@ function BookInfo({details}) {
             <Text style={styles.title}>{details.title}</Text>
             <View style={styles.priceWrapper}>
                 <Text style={styles.priceName}>Price</Text>
-                <Text style={styles.price}>${details.price}</Text>
+                <Text style={styles.price}>₦{details.price}</Text>
             </View>
             <View style={styles.productDesc}>
                 <Text style={styles.descTitle}>Description</Text>
@@ -27,6 +27,14 @@ function BookInfo({details}) {
                     <TextInput style={styles.controlInput} selectionColor="grey" keyboardType="numeric"  />
                     <Pressable style={styles.controlBtn}>
                         <Text style={styles.controlText}>Increase</Text>
+                    </Pressable>
+                </View>
+                <View style={styles.action}>
+                    <Pressable style={styles.actionBtn1}>
+                        <Text style={styles.controlText}>Delete</Text>
+                    </Pressable>
+                    <Pressable style={styles.actionBtn2}>
+                        <Text style={styles.controlText}>Edit</Text>
                     </Pressable>
                 </View>
             </View>

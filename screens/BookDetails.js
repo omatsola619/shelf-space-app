@@ -9,10 +9,10 @@ import { styles } from "../styling/BookDetails.styled";
 
 function BookDetails({ route, navigation }) {
     const bookDetails = route.params.bookDetails;
-
+    
     return (
         <View style={styles.container}>
-            <Header />
+            <Header navigation={navigation} />
             <ScrollView>
                 <View>
                     <ImageDetails details={bookDetails} />

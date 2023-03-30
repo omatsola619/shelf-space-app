@@ -105,18 +105,21 @@ export const styles = StyleSheet.create({
         justifyContent: 'space-between',
     },
     controlBtn: {
-        height: 40,
+        height: 50,
         minWidth: 100,
         backgroundColor: 'black',
         justifyContent: 'center',
-        flex: 1
+        flex: 1,
+        borderRadius: 5
     },
     controlText: {
         color: 'white',
         textAlign: 'center',
+        fontFamily: 'Montserrat_600',
+        fontSize: 13
     },
     controlInput: {
-        height: 40,
+        height: 50,
         borderColor: 'grey',
         minWidth: 100,
         borderWidth: 1,
@@ -124,6 +127,32 @@ export const styles = StyleSheet.create({
         marginHorizontal: 10,
         textAlignVertical: 'center', 
         textAlign: 'center',
+        borderRadius: 5
+    },
+    action: {
+        paddingTop: 30,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+    },
+    actionBtn1: {
+        color: 'white',
+        height: 50,
+        minWidth: 100,
+        backgroundColor: '#ccc',
+        justifyContent: 'center',
+        flex: 1,
+        marginRight: 3,
+        borderRadius: 5
+    },
+    actionBtn2: {
+        color: 'white',
+        height: 50,
+        minWidth: 100,
+        backgroundColor: '#0366d6',
+        justifyContent: 'center',
+        flex: 1,
+        marginLeft: 3,
+        borderRadius: 5
     }
 
 })
