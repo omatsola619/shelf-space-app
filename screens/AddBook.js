@@ -15,6 +15,7 @@ function AddBook() {
     const [genre, setGenre] = useState('');
     const [price, setPrice] = useState('');
     const [isbn, setIsbn] = useState('');
+    const [quantity, setQuantity] = useState();
     const toast = useToast();
 
     const selectImage = async () => {
@@ -40,7 +41,7 @@ function AddBook() {
       }
 
     const handleSubmit = () => {
-        if (!title || !year || !desc || !author || !genre || !price || !isbn || !selectedImage) {
+        if (!title || !year || !desc || !author || !genre || !price || !isbn || !selectedImage || !quantity) {
             showToast();
         } else{
             const data = {
@@ -51,7 +52,8 @@ function AddBook() {
                 genre,
                 price,
                 isbn,
-                selectedImage
+                selectedImage,
+                quantity,
             }
             saveBooks(data)
         }
@@ -108,6 +110,13 @@ function AddBook() {
                     selectionColor="grey" 
                     value={isbn}
                     onChangeText={(text) => setIsbn(text)}
+                />
+                <TextInput
+                    style={styles.inputBox}
+                    placeholder="quantity"
+                    selectionColor="grey" 
+                    value={quantity}
+                    onChangeText={(text) => setQuantity(text)}
                 />
                 <View style={styles.imagePicker}>
                     <TouchableHighlight title="Select Image" style={styles.imageBox} onPress={selectImage}>
