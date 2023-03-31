@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Image, Pressable, ScrollView, Text, TextInput, TouchableHighlight, View } from "react-native";
+import { Button, Image, Pressable, ScrollView, Text, TextInput, TouchableHighlight, View } from "react-native";
 import { styles } from "../styling/AddBook.styled";
 import * as ImagePicker from 'expo-image-picker';
 import { Feather } from '@expo/vector-icons';
+import { useToast } from "react-native-toast-notifications";
+import { saveBooks } from "../utility/http";
 
 function AddBook() {
     const [selectedImage, setSelectedImage] = useState(null);
@@ -13,6 +15,7 @@ function AddBook() {
     const [genre, setGenre] = useState('');
     const [price, setPrice] = useState('');
     const [isbn, setIsbn] = useState('');
+    const toast = useToast();
 
     const selectImage = async () => {
         let result = await ImagePicker.launchImageLibraryAsync({
@@ -26,8 +29,20 @@ function AddBook() {
         }
       };
 
+      const showToast = () => {
+        toast.show("fill the form completely", {
+            type: "warning",
+            placement: "bottom",
+            duration: 1500,
+            offset: 30,
+            animationType: "slide-in"
+        })
+      }
+
     const handleSubmit = () => {
-        if (title && year && desc && author && genre && price && isbn && selectedImage) {
+        if (!title || !year || !desc || !author || !genre || !price || !isbn || !selectedImage) {
+            showToast();
+        } else{
             const data = {
                 title,
                 year,
@@ -38,9 +53,8 @@ function AddBook() {
                 isbn,
                 selectedImage
             }
-            console.log(data);
+            saveBooks(data)
         }
-
     }
 
     return (
