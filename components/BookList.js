@@ -1,5 +1,6 @@
-import { Image, Pressable, Text, View } from "react-native";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "../styling/BookList.styled";
+import { DATA } from "../data/dummyData";
 
 function BookList({item, navigation}) {
 
@@ -7,16 +8,18 @@ function BookList({item, navigation}) {
         navigation.navigate("Details", {bookDetails: item})
     }
     return (
-        <Pressable onPress={handlePress} android_ripple={{color: '#ccc'}} style={({pressed}) => [styles.container, pressed && styles.pressed]}>
-            <View style={styles.wrapper}>
-                <Image style={styles.productImage} source={item.image} />
-                <View style={styles.bookDetails}>
-                    <Text style={styles.bookTitle}>{item.title}</Text>
-                    <Text style={styles.bookAuthor}>{item.author}</Text>
-                    <Text style={styles.price}>${item.price}</Text>
-                </View>
-            </View>
-        </Pressable>
+        <View style={styles.container}>
+            <ScrollView showsHorizontalScrollIndicator={false} horizontal={true} style={styles.generalWrapper}>
+                {
+                DATA.map((item, i) => (
+                    <View key={i} style={[styles.wrapper, i === 0 && styles.firstChild]}>
+                        <Image style={styles.productImage} source={item.image} />
+                        <Text>{item.title}</Text>
+                    </View>
+                ))
+            }
+            </ScrollView>
+        </View>
     )
 }
 

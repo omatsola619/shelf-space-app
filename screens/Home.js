@@ -19,23 +19,9 @@ function Home({navigation}) {
     
     return(
         <View style={styles.container}>
-            <View style={styles.searchContainer}>
-                <Feather name="search" size={22} color="#cccccc" style={styles.searchIcon} />
-                <TextInput 
-                    style={styles.inputBox} 
-                    placeholder="Search books by title, genre or author" 
-                    selectionColor="grey" 
-                    keyboardType="default"
-                    value={query}
-                    onChangeText={(t) => setQuery(t)}
-                />
-            </View>
+            
             <View style={{flex: 1}}>
-                <FlatList 
-                    data={filteredItems}
-                    renderItem={({item}) => <BookList item={item} navigation={navigation} />}
-                    keyExtractor={item => item.isbn}
-                />
+                <BookList />
             </View>
         </View>
     )

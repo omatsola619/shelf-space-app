@@ -2,49 +2,21 @@ import { StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     container: {
-        flex: 1,
-        height: '100%',
-        marginBottom: 25,
-        paddingHorizontal: 7,
-        paddingVertical: 7,
-        marginHorizontal: 10,
-        borderRadius: 7,
-        backgroundColor: '#f9f9f9',
-        justifyContent: 'center',
-
-    },
-    pressed: {
-        opacity: 0.55,
-    } ,
-    wrapper: {
-        flexDirection: 'row',
-        width: '100%',
+        marginVertical: 25,
+        // marginHorizontal: 10,
     },
     productImage: {
-        width: 60,
-        height: 80,
-        borderRadius: 5,
+        width: 100,
+        height: 130,
     },
-    bookDetails: {
-        marginLeft: 20,
-        flexDirection: 'column',
-        justifyContent: 'center',
+    generalWrapper: {
+        
     },
-    bookTitle: {
-        fontSize: 17,
-        fontFamily: 'Montserrat_600',
-        paddingBottom: 2,
-        color: 'black'
+    wrapper: {
+        paddingRight: 10,
     },
-    bookAuthor: {
-        fontSize: 14,
-        color: 'grey',
-        fontFamily: 'Inter_600',
-        paddingBottom: 10,
+    firstChild: {
+        paddingLeft: 10
     },
-    price: {
-        fontSize: 15,
-        fontFamily: 'Montserrat_600',
-        color: '#0366d6'
-    }
+
 });
