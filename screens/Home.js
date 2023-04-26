@@ -1,13 +1,20 @@
-import { FlatList, Text, TextInput, View } from "react-native";
+import { Image, Pressable, ScrollView, Touchable, TouchableOpacity, View } from "react-native";
 import {styles} from '../styling/Home.styled'
-import { Feather } from '@expo/vector-icons';
 import { DATA } from "../data/dummyData";
 import BookList from "../components/BookList";
 import { useState } from "react";
 
+const romanceBooks = DATA.filter(item => item.genre === 'romance')
+const historyBooks = DATA.filter(item => item.genre === 'history')
+const latestBooks = DATA.slice(0, 5)
+
 function Home({navigation}) {
     const [data, setData] = useState(DATA)
     const [query, setQuery] = useState('')
+
+    const handleAddBtn = () => {
+        navigation.navigate('Add')
+    }
 
     const filteredItems = data.filter((item) => {
         return (
@@ -16,13 +23,19 @@ function Home({navigation}) {
             item.author.toLowerCase().includes(query.toLowerCase())
         )
     })
+
     
     return(
         <View style={styles.container}>
-            
-            <View style={{flex: 1}}>
-                <BookList />
-            </View>
+            <ScrollView style={{flex: 1, marginTop: 30}}>
+                <BookList data={latestBooks} title='Latest books' top />
+                <BookList data={romanceBooks} title='Romance' />
+                <BookList data={historyBooks} title='History' />
+            </ScrollView>
+            <TouchableOpacity onPress={handleAddBtn} style={styles.iconWrapper}>
+                 <Image source={require('../assets/addIcon.png')} style={styles.addIcon} />
+            </TouchableOpacity>
+           
         </View>
     )
 };

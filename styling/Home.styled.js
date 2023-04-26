@@ -21,5 +21,14 @@ export const styles = StyleSheet.create({
     },
     searchIcon: {
         marginHorizontal: 10,
+    },
+    iconWrapper: {
+        position: "absolute",
+        top: '85%',
+        left: '78%',
+    },
+    addIcon: {
+        width: 70,
+        height: 70,
     }
 });

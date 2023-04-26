@@ -9,6 +9,7 @@ import Home from './screens/Home';
 import AddBook from './screens/AddBook';
 import Search from './screens/Search';
 import { Feather } from '@expo/vector-icons';
+import Header from './components/Header';
 
 const Stack = createNativeStackNavigator();
 
@@ -20,26 +21,42 @@ export default function App() {
   }
 
   return (
-    <ToastProvider
-      renderToast={(toastOptions) => <ToastComp />}
-    >
-    <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="Discover" component={Home} options={{
-          headerRight: () => <Feather name="search" size={22} color="black" />,
-          headerTitleStyle: {
-            fontFamily: 'Poppins_600',
-            fontSize: 20
-          }
-        }}/>
-        <Stack.Screen name="Details" component={BookDetails} options={{ 
-          headerShown: false,
-        }} />
-        <Stack.Screen name="Search" component={Search} />
-        <Stack.Screen name="Add" component={AddBook} />
-      </Stack.Navigator>
-      <StatusBar style="auto" />
-    </NavigationContainer>
+    <ToastProvider renderToast={(toastOptions) => <ToastComp />}>
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Discover"
+            component={Home}
+            options={({ navigation }) => ({
+              headerRight: () => (
+                <Feather
+                  name="search"
+                  size={24}
+                  color="black"
+                  onPress={() => navigation.navigate("Search")}
+                />
+              ),
+              headerTitleStyle: {
+                fontFamily: "Poppins_600",
+                fontSize: 23,
+              },
+            })}
+          />
+          <Stack.Screen
+            name="Details"
+            component={BookDetails}
+            options={{
+              headerShown: false,
+              
+            }}
+          />
+          <Stack.Screen name="Search" component={Search} options={{
+            header: () => <Header />
+          }} />
+          <Stack.Screen name="Add" component={AddBook} />
+        </Stack.Navigator>
+        <StatusBar style="auto" />
+      </NavigationContainer>
     </ToastProvider>
   );
 }

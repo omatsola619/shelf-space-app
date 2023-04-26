@@ -1,12 +1,16 @@
-import { Text, View } from "react-native";
-import { styles } from "../styling/Home.styled";
+import { Text, TextInput, View } from "react-native";
+import { styles } from "../styling/Header.styled";
+import { MaterialIcons } from '@expo/vector-icons';
 
-function Header({title, style, headerRight}) {
+function Header({options}) {
 
     return (
-        <View style={[styles.container, options.headerStyle]}>
-            <Text style={styles.title}>{title} </Text>
-            <Text>Hello search box</Text>
+        <View style={styles.container}>
+            <View style={styles.searchWrapper}>
+               <MaterialIcons name="cancel-presentation" size={24} color="black" />
+               <TextInput style={styles.searchBox} /> 
+            </View>
+            
         </View>
     )
 }
