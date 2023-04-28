@@ -12,27 +12,34 @@ export const styles = StyleSheet.create({
     },
     inputBox: {
         width: '100%',
-        height: 50,
-        borderColor: '#b3b3b3',
+        height: 46,
+        borderColor: '#B6B6B6',
         borderWidth: 1,
         marginBottom: 30,
-        borderRadius: 4,
+        borderRadius: 7,
         paddingLeft: 15
+    },
+    inputText: {
+        fontSize: 14,
+        fontFamily: 'Poppins_500',
+        marginBottom: 5,
     },
     imagePicker: {
         marginBottom: 30,
     },
     imageBox: {
         height: 50,
-        borderRadius: 4,
-        backgroundColor: '#0366d6',
+        borderRadius: 7,
+        backgroundColor: 'white',
+        borderWidth: 2,
+        borderColor: '#0366d6',
         justifyContent: "center",
     },
     buttonText: {
-        color: 'white',
+        color: '#0366d6',
         fontSize: 15,
         paddingRight: 10,
-        fontFamily: 'Montserrat_600'
+        fontFamily: 'Poppins_500'
     },
     buttonWrapper: {
         display: 'flex',
@@ -43,14 +50,14 @@ export const styles = StyleSheet.create({
     submitBtn: {
         width: '100%',
         height: 50,
-        borderRadius: 4,
-        backgroundColor: 'black',
-        justifyContent: 'center'
+        borderRadius: 7,
+        backgroundColor: '#0366d6',
+        justifyContent: 'center',
     },
     submitText: {
         color: 'white',
         fontSize: 15,
-        fontFamily: 'Montserrat_600',
+        fontFamily: 'Poppins_500',
         textAlign: 'center'
     }
 });

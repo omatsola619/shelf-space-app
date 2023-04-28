@@ -4,7 +4,7 @@ import { styles } from "../../styling/BookDetails.styled";
 function BookInfo({details}) {
     return (
         <View style={styles.productDetails}>
-            <View style={{flex: 1}}>
+            {/* <View style={{flex: 1}}>
             <Text style={styles.author}>{details.author}</Text>
             <Text style={styles.title}>{details.title}</Text>
             <View style={styles.priceWrapper}>
@@ -38,7 +38,7 @@ function BookInfo({details}) {
                     </Pressable>
                 </View>
             </View>
-            </View>
+            </View> */}
         </View>
     )
 }

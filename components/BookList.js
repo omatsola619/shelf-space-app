@@ -1,9 +1,11 @@
 import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { styles } from "../styling/BookList.styled";
+import { useNavigation } from '@react-navigation/native';
 
-function BookList({data, item, navigation, title, top}) {
+function BookList({data, title, top}) {
+    const navigation = useNavigation()
 
-    const handlePress = () => {
+    const handlePress = ({item}) => {
         navigation.navigate("Details", {bookDetails: item})
     }
 
@@ -26,6 +28,7 @@ function BookList({data, item, navigation, title, top}) {
             <View
               key={i}
               style={[styles.wrapper, i === 0 && styles.firstChild]}
+              onPress={handlePress(item)}
             >
               <Image style={styles.productImage} source={item.image} />
               <Text style={styles.productText}>{item.title}</Text>

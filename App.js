@@ -25,7 +25,7 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator>
           <Stack.Screen
-            name="Discover"
+            name="Home"
             component={Home}
             options={({ navigation }) => ({
               headerRight: () => (
@@ -38,8 +38,9 @@ export default function App() {
               ),
               headerTitleStyle: {
                 fontFamily: "Poppins_600",
-                fontSize: 23,
+                fontSize: 22,
               },
+              title: 'Discover'
             })}
           />
           <Stack.Screen
@@ -53,7 +54,14 @@ export default function App() {
           <Stack.Screen name="Search" component={Search} options={{
             header: () => <Header />
           }} />
-          <Stack.Screen name="Add" component={AddBook} />
+          <Stack.Screen name="Add" component={AddBook} options={{
+            headerTitleAlign: 'center',
+            title: 'Add Book',
+            headerTitleStyle: {
+              fontFamily: 'Poppins_600',
+              fontSize: 20
+            }
+          }} />
         </Stack.Navigator>
         <StatusBar style="auto" />
       </NavigationContainer>
